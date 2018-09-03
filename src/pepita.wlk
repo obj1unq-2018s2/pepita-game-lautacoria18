@@ -36,4 +36,8 @@ object pepita {
 		self.posicion(nuevaPosicion)
 		else { game.say(self, "Dame de comer primero!")}
 	}	
+	
+	method teEncontro(algo){
+		algo.darDeComer(self)
+	}
 }

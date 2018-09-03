@@ -23,9 +23,11 @@ program PepitaGame {
 	keyboard.v().onPressDo { pepita.volaHacia(villaGesell) }
 	keyboard.b().onPressDo { pepita.volaHacia(buenosAires) }
 	
-	game.whenCollideDo(roque, { manzana => manzana.esComida()})
-	game.whenCollideDo(roque, { alpiste => alpiste.esComida() })
-	game.whenCollideDo(roque, { manzana => roque.agarraComida(manzana)})
+	//*game.whenCollideDo(roque, { manzana => manzana.esComida()})
+//	game.whenCollideDo(roque, { alpiste => alpiste.esComida() })
+	//game.whenCollideDo(roque, { manzana => roque.agarraComida(manzana)})
+	
+	game.whenCollideDo(roque, { algo => algo.teEncontro(roque)})
 		
 //	START
 	game.start()
